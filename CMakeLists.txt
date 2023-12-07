@@ -25,11 +25,10 @@ add_subdirectory(libs/lib3)
 add_executable(HelloWorld src/main.cpp)
 
 # Target name followed by path to header files (For "cc -I<path_to_header_file_dir>" in makefile)
-target_include_directories(HelloWorld PUBLIC
-    "${PROJECT_BINARY_DIR}" # The build directory where cmake is run
+target_include_directories(HelloWorld PRIVATE # Only sources files for building HelloWorld can see the header files
+    "${PROJECT_BINARY_DIR}" # The build directory where cmake is run, needed for config.h
     "${PROJECT_SOURCE_DIR}/inc" # The root directory of source code, i.e. the directory containing CMakeLists.txt
-    "${PROJECT_SOURCE_DIR}/libs/lib1"
-    # We have specified the paths in sub CMakeLists.txt for lib2 and lib3, so we don't need to specify them here
+    # We have specified the paths in sub CMakeLists.txt for lib1, lib2 and lib3, so we don't need to specify them here
 )
 
 

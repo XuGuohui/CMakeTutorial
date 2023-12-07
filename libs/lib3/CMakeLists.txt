@@ -3,7 +3,7 @@ add_library(lib3 STATIC func.cpp)
 
 # Target name followed by path to header files (For "cc -I<path_to_header_file_dir>" in makefile)
 # The paths are PUBLIC, so we don't need to specify the paths in top CMakeLists.txt
-target_include_directories(lib3 PUBLIC
+target_include_directories(lib3 PUBLIC # Source files for building lib3 and its consumers(Parent lib or final target) can see the header files
     "."
     "./inc"
 )
@@ -26,7 +26,7 @@ else()
     # Create a new library and link it onto lib3
     add_library(libfunc2 STATIC src/func2.cpp)
     target_link_libraries(lib3 PUBLIC libfunc2)
-    target_include_directories(libfunc2 PUBLIC
+    target_include_directories(libfunc2 PRIVATE # Only source files for building libfunc2 can see the header files
         "./inc"
     )
 endif()

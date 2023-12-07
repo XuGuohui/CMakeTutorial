@@ -3,7 +3,7 @@ add_library(lib2 STATIC src/lib2.cpp)
 
 # Target name followed by path to header files (For "cc -I<path_to_header_file_dir>" in makefile)
 # The paths are PUBLIC, so we don't need to specify the paths in top CMakeLists.txt
-target_include_directories(lib2 PUBLIC
+target_include_directories(lib2 PUBLIC # Source files for building lib2 and its consumers(Parent lib or final target) can see the header files
     "./inc"
 )
 
