@@ -1,0 +1,5 @@
+1. This folder demonstrates how to create a library with source files and headers in different directories.
+
+2. This folder demonstrates how to conditionally compile a source file by using macro definitions.
+
+3. This folder demonstrates how to export paths to libraries' header files to top module.

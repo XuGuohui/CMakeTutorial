@@ -1,0 +1,4 @@
+#define PROJECT_VERSION_MAJOR   @HelloWorld_VERSION_MAJOR@ // ProjectName_VERSION_MAJOR
+#define PROJECT_VERSION_MINOR   @HelloWorld_VERSION_MINOR@ // ProjectName_VERSION_MINOR
+#define PROJECT_VERSION_PATCH   @HelloWorld_VERSION_PATCH@ // ProjectName_VERSION_PATCH
+#define PROJECT_VERSION         "@HelloWorld_VERSION@"     // ProjectName_VERSION

@@ -1,0 +1,4 @@
+1. This folder demonstrates how to conditionally compile a source file by using macro definitions.
+
+2. This folder demonstrates how to create a library with only neccessary source files by using option(),
+   so that we don't have to complie unneccessary source files.
