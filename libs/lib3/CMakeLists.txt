@@ -25,7 +25,7 @@ else()
     #2 Another way to conditionally compile the dependdent source files
     # Create a new library and link it onto lib3
     add_library(libfunc2 STATIC src/func2.cpp)
-    target_link_libraries(lib3 PUBLIC libfunc2)
+    target_link_libraries(lib3 PUBLIC libfunc2 compiler_flags) # compiler_flags is defined in top CMakeLists.txt
     target_include_directories(libfunc2 PRIVATE # Only source files for building libfunc2 can see the header files
         "./inc"
     )
